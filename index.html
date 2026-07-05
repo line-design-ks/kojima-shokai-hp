@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ▼確認用の設定：本公開時はタイトル先頭の【確認用】を削除してください -->
+<title>【確認用】小島商会｜熱帯魚専門店（肉食大型魚・古代魚・ナマズ）神戸市灘区</title>
+<meta name="description" content="小島商会は兵庫県神戸市灘区にある熱帯魚専門店です。肉食大型魚・古代魚・ナマズを中心に、マニアックな魚種を数多く取り扱っております。">
+<!-- ▼確認用の設定：検索エンジンに載らないようにする1行。本公開時はこの行を削除してください -->
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e1a26;
+  --bg2:#13232f;
+  --panel:#182b3a;
+  --text:#e8e4da;
+  --muted:#9fb0bb;
+  --accent:#c9a961;
+  --line:#2c4356;
+  --serif:'Noto Serif JP',serif;
+  --sans:'Noto Sans JP',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.9;
+  letter-spacing:.04em;
+}
+img{max-width:100%;display:block;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{opacity:.8;}
+
+/* ヘッダー */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(14,26,38,.95);
+  border-bottom:1px solid var(--line);
+  padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;
+}
+.brand{font-family:var(--serif);font-size:1.25rem;letter-spacing:.18em;color:var(--text);}
+.brand span{display:block;font-size:.6rem;letter-spacing:.3em;color:var(--accent);font-family:var(--sans);}
+nav{display:flex;gap:22px;flex-wrap:wrap;}
+nav a{color:var(--muted);font-size:.82rem;letter-spacing:.12em;}
+nav a:hover{color:var(--accent);opacity:1;}
+
+/* ヒーロー */
+.hero{position:relative;height:78vh;min-height:480px;overflow:hidden;}
+.hero img{width:100%;height:100%;object-fit:cover;opacity:.55;}
+.hero-text{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:0 24px;
+  background:linear-gradient(to bottom,rgba(14,26,38,.25),rgba(14,26,38,.7));
+}
+.hero-text h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(2.2rem,6vw,3.6rem);letter-spacing:.3em;text-indent:.3em;
+}
+.hero-text .en{color:var(--accent);letter-spacing:.35em;font-size:.75rem;margin-top:14px;}
+.hero-text .lead{margin-top:26px;max-width:620px;font-size:.95rem;color:#d7dde2;text-align:left;}
+
+/* セクション共通 */
+section{padding:88px 24px;}
+.inner{max-width:960px;margin:0 auto;}
+.sec-label{
+  text-align:center;margin-bottom:52px;
+}
+.sec-label .en{color:var(--accent);font-size:.72rem;letter-spacing:.35em;text-transform:uppercase;}
+.sec-label h2{
+  font-family:var(--serif);font-weight:500;font-size:1.6rem;letter-spacing:.2em;margin-top:6px;
+}
+.sec-label h2::after{
+  content:"";display:block;width:36px;height:1px;background:var(--accent);margin:20px auto 0;
+}
+.alt{background:var(--bg2);}
+
+/* こだわり */
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+.concept-grid img{border:1px solid var(--line);}
+.concept-text h3{font-family:var(--serif);font-weight:500;font-size:1.15rem;letter-spacing:.12em;margin-bottom:16px;color:var(--accent);}
+.concept-text p{font-size:.92rem;color:#cfd6db;margin-bottom:14px;}
+
+/* 取扱い */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:56px;}
+.cat{background:var(--panel);padding:34px 24px;text-align:center;}
+.cat h3{font-family:var(--serif);font-weight:500;font-size:1.05rem;letter-spacing:.15em;margin-bottom:12px;}
+.cat h3 span{display:block;font-size:.62rem;color:var(--accent);letter-spacing:.25em;margin-bottom:6px;font-family:var(--sans);}
+.cat p{font-size:.84rem;color:var(--muted);}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.gallery figure{margin:0;}
+.gallery img{aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);}
+.gallery figcaption{font-size:.75rem;color:var(--muted);letter-spacing:.1em;margin-top:8px;text-align:center;}
+.note-price{text-align:center;font-size:.8rem;color:var(--muted);margin-top:40px;}
+
+/* ブログ */
+.blog-box{
+  border:1px solid var(--line);background:var(--panel);
+  padding:48px 32px;text-align:center;max-width:640px;margin:0 auto;
+}
+.blog-box p{font-size:.92rem;color:#cfd6db;margin-bottom:28px;}
+.btn{
+  display:inline-block;border:1px solid var(--accent);color:var(--accent);
+  padding:12px 44px;font-size:.85rem;letter-spacing:.2em;
+}
+.btn:hover{background:var(--accent);color:var(--bg);opacity:1;}
+
+/* 店舗情報 */
+table{width:100%;border-collapse:collapse;font-size:.9rem;}
+th,td{padding:16px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+th{width:9em;color:var(--accent);font-weight:400;letter-spacing:.15em;font-family:var(--serif);}
+.tel-note{display:block;font-size:.8rem;color:var(--muted);margin-top:6px;}
+.mail-wrap{margin-top:4px;}
+
+/* フッター */
+footer{
+  border-top:1px solid var(--line);
+  padding:36px 24px;text-align:center;
+}
+footer .f-brand{font-family:var(--serif);letter-spacing:.25em;margin-bottom:8px;}
+footer small{color:var(--muted);font-size:.72rem;letter-spacing:.1em;}
+
+@media(max-width:760px){
+  .concept-grid{grid-template-columns:1fr;}
+  .cat-grid{grid-template-columns:1fr;}
+  .gallery{grid-template-columns:repeat(2,1fr);}
+  section{padding:64px 18px;}
+  th{width:7em;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">小島商会<span>KOJIMA SHOKAI</span></div>
+  <nav>
+    <a href="#top">ホーム</a>
+    <a href="#concept">こだわり</a>
+    <a href="#fish">取扱い</a>
+    <a href="#blog">昆虫図鑑・ブログ</a>
+    <a href="#shop">店舗情報</a>
+  </nav>
+</header>
+
+<!-- トップ -->
+<div class="hero" id="top">
+  <img src="images/fish03.jpg" alt="小島商会の熱帯魚">
+  <div class="hero-text">
+    <h1>小島商会</h1>
+    <p class="en">TROPICAL FISH — KOBE, NADA</p>
+    <p class="lead">小島商会は、兵庫県神戸市灘区にある熱帯魚専門店です。特に肉食大型魚・古代魚・ナマズを中心に、マニアックな魚種を数多く取り扱っております。店頭では実際に魚の状態や泳ぎ姿をご覧いただけます。お気軽にご来店ください。</p>
+  </div>
+</div>
+
+<!-- こだわり -->
+<section id="concept">
+  <div class="inner">
+    <div class="sec-label">
+      <p class="en">Concept</p>
+      <h2>お店のこだわり</h2>
+    </div>
+    <div class="concept-grid">
+      <img src="images/fish15.jpg" alt="水槽の中の古代魚">
+      <div class="concept-text">
+        <h3>天然物・採取へのこだわり</h3>
+        <p>小島商会では、天然採集された個体（ワイルド個体）を大切に扱っております。自然の中で育った魚ならではの体つきや色合い、野性味のある姿をお楽しみいただけます。</p>
+        <p>入荷した魚は一匹ずつ状態を確かめながら管理しています。図鑑や画面ごしでは伝わらない魚の魅力を、ぜひ店頭でお確かめください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 取扱い -->
+<section id="fish" class="alt">
+  <div class="inner">
+    <div class="sec-label">
+      <p class="en">Fish</p>
+      <h2>取扱い魚種</h2>
+    </div>
+    <div class="cat-grid">
+      <div class="cat">
+        <h3><span>PREDATORY FISH</span>肉食大型魚</h3>
+        <p>迫力ある泳ぎと捕食シーンが魅力の大型魚を中心に取り揃えています。</p>
+      </div>
+      <div class="cat">
+        <h3><span>ANCIENT FISH</span>古代魚</h3>
+        <p>太古の姿を今にとどめる古代魚。肺魚・アロワナの仲間などを扱っています。</p>
+      </div>
+      <div class="cat">
+        <h3><span>CATFISH</span>ナマズ</h3>
+        <p>個性豊かなナマズの仲間を各種。マニアックな種類もご相談ください。</p>
+      </div>
+    </div>
+    <div class="gallery">
+      <figure><img src="images/fish11.jpg" alt="ヘテロティス"><figcaption>ヘテロティス</figcaption></figure>
+      <figure><img src="images/fish10.jpg" alt="ベトナムアンコウ"><figcaption>ベトナムアンコウ</figcaption></figure>
+      <figure><img src="images/fish06.jpg" alt="オムポックSP"><figcaption>オムポックSP</figcaption></figure>
+      <figure><img src="images/fish14.jpg" alt="レオパードキャット"><figcaption>レオパードキャット</figcaption></figure>
+      <figure><img src="images/fish13.jpg" alt="モグルンダ"><figcaption>モグルンダ</figcaption></figure>
+      <figure><img src="images/fish08.jpg" alt="ドンコ"><figcaption>ドンコ</figcaption></figure>
+      <figure><img src="images/fish05.jpg" alt="エチコン"><figcaption>エチコン</figcaption></figure>
+      <figure><img src="images/fish12.jpg" alt="マルモラータス"><figcaption>マルモラータス</figcaption></figure>
+      <figure><img src="images/fish07.jpg" alt="ドロイ"><figcaption>ドロイ</figcaption></figure>
+    </div>
+    <p class="note-price">在庫・入荷状況はお問い合わせください。</p>
+  </div>
+</section>
+
+<!-- 昆虫図鑑・ブログ -->
+<section id="blog">
+  <div class="inner">
+    <div class="sec-label">
+      <p class="en">Blog</p>
+      <h2>昆虫図鑑・ブログ</h2>
+    </div>
+    <div class="blog-box">
+      <p>店主が採集・観察してきた昆虫の記録や、お店の日々の話題はnoteにて公開しています。</p>
+      <!-- ▼noteのURLが決まったら、下の「#」をURLに書き換えてください -->
+      <a class="btn" href="#" target="_blank" rel="noopener">noteを読む</a>
+    </div>
+  </div>
+</section>
+
+<!-- 店舗情報・お問い合わせ -->
+<section id="shop" class="alt">
+  <div class="inner">
+    <div class="sec-label">
+      <p class="en">Shop Info</p>
+      <h2>店舗情報・お問い合わせ</h2>
+    </div>
+    <table>
+      <tr><th>店名</th><td>小島商会</td></tr>
+      <tr><th>住所</th><td>〒657-0045　兵庫県神戸市灘区下河原通り3丁目5-13</td></tr>
+      <tr>
+        <th>電話</th>
+        <td>078-802-3013
+          <span class="tel-note">お電話に出られないことが多いため、お問い合わせはメールにてお願いします。</span>
+        </td>
+      </tr>
+      <tr>
+        <th>メール</th>
+        <td class="mail-wrap"><span id="mail">メールアドレスを表示するにはJavaScriptを有効にしてください。</span></td>
+      </tr>
+      <tr><th>営業時間</th><td>19時〜21時</td></tr>
+      <tr><th>定休日</th><td>不定休</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <p class="f-brand">小島商会</p>
+  <small>&copy; 2026 Kojima Shokai All Rights Reserved.</small>
+</footer>
+
+<script>
+// 迷惑メール対策：アドレスを分割して組み立てて表示
+(function(){
+  var a = ["osteoglossum", "bicrrhosum"].join(".");
+  var b = ["gmail", "com"].join(".");
+  var addr = a + String.fromCharCode(64) + b;
+  var el = document.getElementById("mail");
+  var link = document.createElement("a");
+  link.href = "mailto:" + addr;
+  link.textContent = addr;
+  el.textContent = "";
+  el.appendChild(link);
+})();
+</script>
+
+</body>
+</html>
